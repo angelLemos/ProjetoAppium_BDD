@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue= {"br.com.rsinet.hub_bdd.steps"},
-		tags = {"@CriarCadastroComSucesso , @validarBotao"},
+		tags = {"@pesquisarProdutoPelaHome , @validarQuantidadeDeProdutos"},
 	//	plugin = {"pretty" , "com.cucumber.listener.ExtentCucumberFormatter:target/reportTestes.html"},
 	
 		//exibir a saída do console de maneira legível

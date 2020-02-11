@@ -21,7 +21,7 @@ import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 import io.appium.java_client.android.AndroidDriver;
 
-public class formularioStep {
+public class formulario {
 
 	private AndroidDriver<WebElement> driver;
 	private TelaInicialObject telaInicial;
@@ -40,6 +40,7 @@ public class formularioStep {
 		telaMenu = new TelaMenuObject(driver);
 		telaLogin = new TelaLoginObject(driver);
 		telaFormulario = new TelaFormularioObject(driver);
+		
 		scrollTela = new Scroll(driver);
 		wait = new WebDriverWait(driver, 10);
 

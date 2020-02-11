@@ -1,7 +1,5 @@
 package br.com.rsinet.hub_bdd.TelaObject;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

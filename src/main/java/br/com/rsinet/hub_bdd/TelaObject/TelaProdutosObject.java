@@ -13,7 +13,10 @@ public class TelaProdutosObject {
 	private WebDriverWait wait;
 
 	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'HP PAVILION 15Z TOUCH LAPTOP')]")
-	private WebElement lnkEscolherProduto;
+	private WebElement lnkEscolherProdutoLupa;
+	
+	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'LOGITECH USB HEADSET H390')]")
+	private WebElement lnkEscolherProdutoTela;
 
 	@FindBy(xpath = "//android.widget.TextView[starts-with(@text, '1')]")
 	private WebElement btnClicarEmQuantidades;
@@ -37,7 +40,12 @@ public class TelaProdutosObject {
 	}
 
 	public void escolherProdutoNaTelaDeProduto() {
-		lnkEscolherProduto.click();
+		lnkEscolherProdutoLupa.click();
+
+	}
+	
+	public void escolherProdutoNaTelaDeProdutoHome() {
+		lnkEscolherProdutoTela.click();
 
 	}
 

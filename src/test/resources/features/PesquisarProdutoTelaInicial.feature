@@ -10,11 +10,11 @@ Contexto:
     E escolher produto desejado na lista de produtos
     Entao estou na tela da opcao escolhida
     
-    @validarAberturaProdutoErrado
-    Cenario: Certifica abertura de produto diferente
+    @validarQuantidadeDeProdutos
+    Esquema do Cenario: Certifica abertura de produto diferente
     Quando clicar no menu
     E clicar em Login no menu
-    E inserir usuario e senha
+    E inserir usuario e senha "<usuario>" , "<senha>" 
     E clicar em logar
     E escolher categoria na tela inicial 
     E escolher produto
@@ -22,6 +22,10 @@ Contexto:
     E adicionar no carrinho
     Entao constata que a limitacao na quantidade
     
+    Exemplos:
+    
+    |usuario  |senha     | 
+    |Angjokl89|Athena1234|       
     
 
 
