@@ -1,6 +1,5 @@
 package br.com.rsinet.hub_bdd.steps;
 
-import static br.com.rsinet.hub_bdd.utils.DriverFactory.fecharDriver;
 import static br.com.rsinet.hub_bdd.utils.DriverFactory.inicializarDriver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -15,7 +14,6 @@ import br.com.rsinet.hub_bdd.TelaObject.TelaInicialObject;
 import br.com.rsinet.hub_bdd.TelaObject.TelaLoginObject;
 import br.com.rsinet.hub_bdd.TelaObject.TelaMenuObject;
 import br.com.rsinet.hub_bdd.utils.Scroll;
-import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -130,6 +128,7 @@ public class formulario {
 
 	@Quando("^clicar em menu para verificar usuario logado$")
 	public void clicar_em_menu_para_verificar_usuario_logado() throws Throwable {
+		Scroll.scrollTelaInicial();
 		telaInicial.clicarMenu();
 	}
 	

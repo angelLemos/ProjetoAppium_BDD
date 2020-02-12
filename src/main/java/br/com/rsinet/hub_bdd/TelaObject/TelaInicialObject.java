@@ -13,7 +13,7 @@ public class TelaInicialObject {
 	private AndroidDriver<WebElement> driver;
 	private WebDriverWait wait;
 
-	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/imageViewMenu")
+	@FindBy(id = "com.Advantage.aShopping:id/imageViewMenu")
 	private WebElement btnClicarMenu;
 
 	@FindBy(id = "com.Advantage.aShopping:id/editTextSearch")
