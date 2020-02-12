@@ -15,13 +15,16 @@ public class TelaProdutosObject {
 	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'HP PAVILION 15Z TOUCH LAPTOP')]")
 	private WebElement lnkEscolherProdutoLupa;
 	
-	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'LOGITECH USB HEADSET H390')]")
+	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'HP ROAR MINI WIRELESS SPEAKER')]")
 	private WebElement lnkEscolherProdutoTela;
 
-	@FindBy(xpath = "//android.widget.TextView[starts-with(@text, '1')]")
+	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'HP H2310 IN-EAR HEADSET')]")
+	private WebElement lnkClicaNoFoneNaTelaProdutos;
+	
+	@FindBy(id =  "com.Advantage.aShopping:id/linearLayoutProductQuantity")
 	private WebElement btnClicarEmQuantidades;
 
-	@FindBy(id = "com.Advantage.aShopping:id/imageViewSearch")
+	@FindBy(id = "com.Advantage.aShopping:id/textViewProductQuantity")
 	private WebElement lnkAlterarQuantidade;
 
 	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'SPEAKERS')]")
@@ -50,10 +53,12 @@ public class TelaProdutosObject {
 	}
 
 	public void clicarEmQuantidade() {
+		wait.until(ExpectedConditions.visibilityOf(btnClicarEmQuantidades));
 		btnClicarEmQuantidades.click();
 	}
 
 	public void alterarQuantidades(String digiteAQuantidade) {
+		
 		lnkAlterarQuantidade.clear();
 		lnkAlterarQuantidade.sendKeys(digiteAQuantidade);
 	}
@@ -67,6 +72,10 @@ public class TelaProdutosObject {
 	public void adicionarNoCarrinho() {
 		wait.until(ExpectedConditions.visibilityOf(btnAdicionarNoCarrinho));
 		btnAdicionarNoCarrinho.click();
+	}
+	
+	public void clicarNoFone() {
+		lnkClicaNoFoneNaTelaProdutos.click();
 	}
 
 }

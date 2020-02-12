@@ -24,8 +24,8 @@ Contexto:
     
     Exemplos:
     
-    |usuario  |senha     | 
-    |Angjokl89|Athena1234|       
+    | usuario   | senha      | 
+    | Angjokl89 | Athena1234 |       
     
 
 

@@ -15,13 +15,13 @@ public class TelaLoginObject {
 	@FindBy(id = "com.Advantage.aShopping:id/textViewDontHaveAnAccount")
 	private WebElement lnkCriarConta;
 
-	@FindBy(id = "//android.widget.TextView[starts-with(@text,'USER NAME')]")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[3]/android.widget.EditText")
 	private WebElement txtInserirUserName;
 
-	@FindBy(id = "//android.widget.TextView[starts-with(@text,'PASSWORD')]")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[4]/android.widget.EditText")
 	private WebElement txtInserirSenha;
 
-	@FindBy(id = "//android.widget.Button[starts-with(@text, 'LOGIN')]")
+	@FindBy(id = "com.Advantage.aShopping:id/buttonLogin")
 	private WebElement btnClicarEmLogin;
 
 	public TelaLoginObject(AndroidDriver<WebElement> driver) {
@@ -36,21 +36,15 @@ public class TelaLoginObject {
 	}
 
 	public void clicarEmUserName(String userName) {
+		wait.until(ExpectedConditions.visibilityOf(txtInserirUserName));
 		txtInserirUserName.click();
 		txtInserirUserName.sendKeys(userName);
-//			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[3]/android.widget.EditText\r\n" + 
-//					"").click();
-//			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[3]/android.widget.EditText\r\n" + 
-//					"").sendKeys(userName);
 	}
 
 	public void clicarEmPassword(String password) {
+		wait.until(ExpectedConditions.visibilityOf(txtInserirSenha));
 		txtInserirSenha.click();
 		txtInserirSenha.sendKeys(password);
-//			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[4]/android.widget.EditText\r\n" + 
-//					"").click();
-//			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[4]/android.widget.EditText\r\n" + 
-//					"").sendKeys(password);
 
 	}
 

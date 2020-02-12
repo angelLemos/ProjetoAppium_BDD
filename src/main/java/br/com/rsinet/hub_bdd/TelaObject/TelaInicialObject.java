@@ -2,6 +2,7 @@ package br.com.rsinet.hub_bdd.TelaObject;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +13,7 @@ public class TelaInicialObject {
 	private AndroidDriver<WebElement> driver;
 	private WebDriverWait wait;
 
-	@FindBy(id = "com.Advantage.aShopping:id/imageViewMenu")
+	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/imageViewMenu")
 	private WebElement btnClicarMenu;
 
 	@FindBy(id = "com.Advantage.aShopping:id/editTextSearch")
@@ -21,7 +22,7 @@ public class TelaInicialObject {
 	@FindBy(id = "com.Advantage.aShopping:id/imageViewSearch")
 	private WebElement btnClicarLupa;
 
-	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'SPEAKERS')]")
+	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'HEADPHONES')]")
 	private WebElement lnkClicarEmCategoriaHome;
 
 	public TelaInicialObject(AndroidDriver<WebElement> driver) {
@@ -42,8 +43,6 @@ public class TelaInicialObject {
 	}
 
 	public void clicarMenu() throws InterruptedException {
-		Thread.sleep(3000);
-//		wait.pollingEvery(Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(btnClicarMenu));
 		btnClicarMenu.click();
 

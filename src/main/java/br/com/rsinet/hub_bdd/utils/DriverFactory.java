@@ -38,11 +38,12 @@ public class DriverFactory {
 		return driver;
 	}
 
-	public static void fecharDriver() {
-		if (driver != null) {
+	public static AndroidDriver<WebElement> fecharDriver() {
+		if (driver != null) 
 			driver.quit();
-			driver = null;
+			return driver = null;
+			
 		}
 	}
-}
+
 
