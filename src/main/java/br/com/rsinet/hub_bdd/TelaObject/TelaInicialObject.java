@@ -42,7 +42,7 @@ public class TelaInicialObject {
 
 	}
 
-	public void clicarMenu() throws InterruptedException {
+	public void clicarMenu() {
 		wait.until(ExpectedConditions.visibilityOf(btnClicarMenu));
 		btnClicarMenu.click();
 

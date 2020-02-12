@@ -145,10 +145,5 @@ public class formulario {
 		scrollTela.scroll("REGISTER");
 		assertFalse(telaFormulario.verificarSeRegistrarEstaDisponivel());
 	}
-	
-	@After
-	public void finaliza() {
-		fecharDriver();
-	}
 
 }

@@ -14,15 +14,17 @@ public class DriverFactory {
 
 	private DriverFactory() {
 		
-		//fguyhdf
-		
+	}
+	public static AndroidDriver<WebElement> iniciarDriver() throws MalformedURLException{
+		if(driver == null)
+			driver = inicializarDriver();
+		return driver;
 	}
 
-	@SuppressWarnings("unused")
-	public static AndroidDriver<WebElement> inicializarDriver() throws MalformedURLException {
-		if(driver == null) {
+	public static  AndroidDriver<WebElement> inicializarDriver() throws MalformedURLException {
+			
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("deviceName", "emuladorAngel");
+		desiredCapabilities.setCapability("deviceName", "Angel");
 		desiredCapabilities.setCapability("udid", "emulator-5554");
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("platformVersion", "9");
@@ -31,10 +33,9 @@ public class DriverFactory {
 		desiredCapabilities.setCapability("unicodeKeyboard", true);
 		desiredCapabilities.setCapability("resetKeyboard", true);
 
-		URL remoteUrl = new URL("http://127.0.0.1:4723/wd/hub");
-		driver = new AndroidDriver<WebElement>(remoteUrl, desiredCapabilities);
+		if(driver == null) 
+		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
 		return driver;
 	}
 

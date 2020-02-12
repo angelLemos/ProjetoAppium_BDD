@@ -35,6 +35,12 @@ public class TelaProdutosObject {
 
 	@FindBy(id = "com.Advantage.aShopping:id/buttonProductAddToCart")
 	private WebElement btnAdicionarNoCarrinho;
+	
+	@FindBy(id = "com.Advantage.aShopping:id/imageViewCart")
+	private WebElement btnClicarCarrinho;
+	
+	@FindBy(id = "com.Advantage.aShopping:id/buttonCheckOut")
+	private WebElement btnEsperarBotaoChekoutEstarVisivel;
 
 	public TelaProdutosObject(AndroidDriver<WebElement> driver) {
 		this.driver = (AndroidDriver<WebElement>) driver;
@@ -75,7 +81,12 @@ public class TelaProdutosObject {
 	}
 	
 	public void clicarNoFone() {
+		wait.until(ExpectedConditions.visibilityOf(lnkClicaNoFoneNaTelaProdutos));
 		lnkClicaNoFoneNaTelaProdutos.click();
 	}
-
+	public void abrirCarrinho() {
+		btnClicarCarrinho.click();
+		wait.until(ExpectedConditions.visibilityOf(btnEsperarBotaoChekoutEstarVisivel));
+	
+	}
 }

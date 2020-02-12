@@ -110,6 +110,7 @@ public class PesquisaHome {
 
 	@Entao("^constata que a limitacao na quantidade$")
 	public void constata_que_a_limitacao_na_quantidade() throws Throwable {
+		telaProduto.abrirCarrinho();
 		Assert.assertTrue(driver.getPageSource().contains("10"));
 	}
 

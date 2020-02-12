@@ -11,7 +11,7 @@ Contexto:
     Entao estou na tela da opcao escolhida
     
     @validarQuantidadeDeProdutos
-    Esquema do Cenario: Certifica abertura de produto diferente
+    Esquema do Cenario: Certifica que nao pode ter mais que dez produtos no carrinho
     Quando clicar no menu
     E clicar em Login no menu
     E inserir usuario e senha "<usuario>" , "<senha>" 

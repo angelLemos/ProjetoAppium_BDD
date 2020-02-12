@@ -18,9 +18,9 @@ Funcionalidade: Cadastrar Usuario
     E insere o ultimo nome "<ultimoNome>"
     E insere o numero do telefone "<telefone>"
     E seleciona o pais "<pais>"
-    E insere a cidade "<cidade>"
-    E insere o endereco "<endereco>"
     E insere o estado "<estado>"
+    E insere o endereco "<endereco>"
+    E insere a cidade "<cidade>"
     E insere o CEP "<CEP>"
     E clicar em registrar 
     E clicar em menu para verificar usuario logado 
@@ -29,7 +29,7 @@ Funcionalidade: Cadastrar Usuario
     Exemplos:
     
       | userName | email           | senha      | senhaConfirm | primeiroNome | ultimoNome | telefone     | pais   | estado    | endereco    | cidade | CEP       |
-      | Angjolpq9| athena@live.com | Athena1234 | Athena1234   | Athena       | Mel        | (13)967548903| Brazil | Sao Paulo | Av.Cons, 188| Santos | 11.787-889|
+      | Angopio8 | athena@live.com | Athena1234 | Athena1234   | Athena       | Mel        | (13)967548903| Brazil | Sao Paulo | Av.Cons, 188| Santos | 11.787-889|
 
     @validarBotao
     Esquema do Cenario: Validar se o botao registrar esta desabilitado sem informacoes preenchidas
