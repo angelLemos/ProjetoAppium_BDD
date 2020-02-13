@@ -49,11 +49,13 @@ public class TelaProdutosObject {
 	}
 
 	public void escolherProdutoNaTelaDeProduto() {
+		wait.until(ExpectedConditions.visibilityOf(lnkEscolherProdutoLupa));
 		lnkEscolherProdutoLupa.click();
 
 	}
 	
 	public void escolherProdutoNaTelaDeProdutoHome() {
+		wait.until(ExpectedConditions.visibilityOf(lnkEscolherProdutoTela));
 		lnkEscolherProdutoTela.click();
 
 	}
@@ -64,7 +66,7 @@ public class TelaProdutosObject {
 	}
 
 	public void alterarQuantidades(String digiteAQuantidade) {
-		
+		wait.until(ExpectedConditions.visibilityOf(lnkAlterarQuantidade));
 		lnkAlterarQuantidade.clear();
 		lnkAlterarQuantidade.sendKeys(digiteAQuantidade);
 	}
