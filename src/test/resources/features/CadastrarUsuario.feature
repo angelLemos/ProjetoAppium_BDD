@@ -29,7 +29,7 @@ Funcionalidade: Cadastrar Usuario
     Exemplos:
     
       | userName | email           | senha      | senhaConfirm | primeiroNome | ultimoNome | telefone     | pais   | estado    | endereco    | cidade | CEP       |
-      | Angeui001| athena@live.com | Athena1234 | Athena1234   | Athena       | Mel        | (13)967548903| Brazil | Sao Paulo | Av.Cons, 188| Santos | 11.787-889|
+      | Melissa01| athena@live.com | Athena1234 | Athena1234   | Athena       | Mel        | (13)967548903| Brazil | Sao Paulo | Av.Cons, 188| Santos | 11.787-889|
 
     @validarBotao
     Esquema do Cenario: Validar se o botao registrar esta desabilitado sem informacoes preenchidas
