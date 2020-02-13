@@ -51,7 +51,6 @@ public class PesquisaHome {
 
 	@Entao("^estou na tela da opcao escolhida$")
 	public void estou_na_tela_da_opcao_escolhida() throws Throwable {
-	
 		WebElement element = driver.findElementById("com.Advantage.aShopping:id/textViewProductName");
 		wait.until(ExpectedConditions.visibilityOf(element));
 		assertEquals(element.getText(), "HP ROAR MINI WIRELESS SPEAKER");

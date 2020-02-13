@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "br.com.rsinet.hub_bdd.steps" },
-		tags = {"@validarQuantidadeDeProdutos"},
+		//tags = {"@pesquisarProdutoPelaHome"},
 		plugin = { "pretty", "com.cucumber.listener.ExtentCucumberFormatter:target/reportTestes.html" },
 
 		// exibir a saída  legível no console

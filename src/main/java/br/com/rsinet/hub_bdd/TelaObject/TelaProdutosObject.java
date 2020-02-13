@@ -24,7 +24,7 @@ public class TelaProdutosObject {
 	@FindBy(id =  "com.Advantage.aShopping:id/linearLayoutProductQuantity")
 	private WebElement btnClicarEmQuantidades;
 
-	@FindBy(id = "com.Advantage.aShopping:id/textViewProductQuantity")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText")
 	private WebElement lnkAlterarQuantidade;
 
 	@FindBy(xpath = "//android.widget.TextView[starts-with(@text,'SPEAKERS')]")
